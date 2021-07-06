@@ -1,0 +1,31 @@
+<!-- START: Add New Customer -->
+
+<div class="add-customer panel">
+    <div class="add-customer__header d-flex align-items-center">
+      <h3>Add New Customer</h3>
+    
+      <button class="btn btn-primary ml-auto" (click)=toggleAddCustomer()>{{ showAddCustomer == false? "Add" : "Close" }}</button>
+    </div>
+
+    <div class="add-customer__body" *ngIf='showAddCustomer'>
+      <!-- <form (ngSubmit)="onSubmit()" #heroForm="ngForm"> -->
+        <form #heroForm="ngForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" [(ngModel)]="name" class="form-control" name="customer_name" aria-describedby="name" placeholder="Enter name" required>
+        </div>
+        <div class="form-group">
+          <label for="salary">Salary</label>
+          <input type="text" [(ngModel)]="salary" class="form-control" name="customer_salary" aria-describedby="salary" placeholder="Enter salary" required>
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="text" [(ngModel)]="age" class="form-control" name="customer_age" aria-describedby="age" placeholder="Enter age" >
+        </div>
+        
+        <button type="submit" (click)="onSubmit(); heroForm.resetForm()" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- END: Add New Customer -->

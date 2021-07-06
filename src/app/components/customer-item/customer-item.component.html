@@ -1,0 +1,13 @@
+<li class="media">
+    <img class="mr-3" src="../assets/images/avatar1.png" alt="avatar Image">
+    <div class="media-body">
+        <h5 class="mb-2">{{customer.employee_name}}  <span class="badge badge-secondary">{{customer.employee_age}}</span></h5>
+        <p>{{customer.employee_salary | currency :'GBP':'symbol':'1.2-2'}}</p>
+    </div>
+    <div class="customer-list__settings">
+        <ul>
+        <li><a (click)="onUpdate(customer)" class="bg-primary" href="#"><i class="far fa-edit"></i></a></li>
+        <li><a (click)="onDelete(customer)" class="bg-danger" href="#"><i class="far fa-trash-alt"></i></a></li>
+        </ul>
+    </div>
+</li>

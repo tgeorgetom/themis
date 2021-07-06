@@ -1,0 +1,227 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+
+// General Styles
+
+body {
+  background: #b6e7cd;
+  color: #313b57;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+p {
+  color: #585858;
+}
+
+.panel {
+  padding: 20px 30px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 40px rgb(0 0 0 / 5%);
+  margin-bottom: 30px;
+
+  h3 {
+    color: #2e4453;
+    font-size: 20px;
+  }
+}
+
+.media {
+  position: relative;
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  img {
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+}
+
+.dashboard {
+  margin: 30px 0;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #68bf98;
+  border-color: #68bf98;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: #589c7d !important;
+    border-color: #589c7d !important;
+  }
+}
+
+.form-control {
+  background: #f9f2f2;
+  border: beige;
+  border-radius: 0;
+  padding: 25px 20px;
+
+  label {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 5px;
+  }
+}
+
+.badge {
+  font-size: 12px;
+  vertical-align: middle;
+  /* font-weight: 300; */
+  letter-spacing: 1px;
+  margin-left: 5px;
+  //   background-color: #68bf98;
+}
+
+// Aside
+
+.aside {
+  max-width: 400px;
+
+  h1 {
+    border-bottom: 2px solid #b6e7cd;
+    padding-bottom: 10px;
+
+    a,
+    img {
+      max-width: 150px;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  .aside-links {
+    margin: 30px 0;
+    li {
+      margin-bottom: 20px;
+      a {
+        color: #b2b5c0;
+        font-weight: 500;
+        display: block;
+        position: relative;
+        padding: 5px 10px;
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: -30px;
+          height: 100%;
+          background-color: #68bf98;
+          width: 5px;
+          border-radius: 0 20px 20px 0;
+          top: 0;
+          opacity: 0;
+          visibility: hidden;
+          transition: 0.5s;
+        }
+
+        &.active,
+        &:hover {
+          color: #68bf98;
+
+          &:before {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+  }
+}
+
+// Add Customer
+
+.add-customer {
+  &__header {
+  }
+
+  &__body {
+    padding: 30px 0 10px;
+  }
+}
+
+// Customer List
+
+.customer-list {
+  max-height: 400px;
+  overflow: auto;
+  .media {
+    margin-bottom: 10px;
+    background-color: #f9f2f2;
+    padding: 15px 20px;
+
+    &:hover .customer-list__settings {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .customer-list__settings {
+      position: absolute;
+      right: 20px;
+      top: 25px;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.5s;
+
+      ul {
+        display: flex;
+
+        li {
+          margin-right: 15px;
+        }
+
+        a {
+          height: 45px;
+          width: 45px;
+          border-radius: 50%;
+          display: block;
+          line-height: 45px;
+          color: #fff;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

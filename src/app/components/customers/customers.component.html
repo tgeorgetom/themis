@@ -1,0 +1,21 @@
+
+<!-- <app-add-customer (onAddCustomer)="addCustomer($event)"></app-add-customer> -->
+<app-add-customer (onAddCustomer)="addCustomer($event)"></app-add-customer>
+
+<!-- START: Customers List -->
+
+<div class="customer panel">
+    <h3>Customers List</h3>
+
+    <ul class="customer-list mt-4">
+
+        <app-customer-item
+            *ngFor="let customer of customers"
+            [customer]="customer"
+            (onDeleteCustomer)="deleteCustomer(customer)"
+            (onUpdateCustomer)="updateCustomer(customer)"
+        ></app-customer-item>
+    </ul>
+</div>
+
+<!-- END: Customers List -->
