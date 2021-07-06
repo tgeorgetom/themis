@@ -42,11 +42,11 @@ export class CustomerService {
     return this.http.post<Customer[]>(url, customer, httpOptions)
   }
 
-  updateCustomer(customer: Customer): Observable<Customer[]> {
-    const url = `${this.apiUrl}/${customer.id}`;
-    console.log("Service:" + url)
+  // updateCustomer(customer: Customer): Observable<Customer[]> {
+  //   const url = `${this.apiUrl}/${customer.id}`;
+  //   console.log("Service:" + url)
     
-    // return this.http.put<Customer>(url, customer, httpOptions);
-  }
+  //   // return this.http.put<Customer>(url, customer, httpOptions);
+  // }
 
 }

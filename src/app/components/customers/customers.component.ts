@@ -24,11 +24,11 @@ export class CustomersComponent implements OnInit {
     )
   }
 
-  updateCustomer(customer: Customer){
-    this.customerSevice
-    .updateCustomer(customer)
-    .subscribe()
-  }
+  // updateCustomer(customer: Customer){
+  //   this.customerSevice
+  //   .updateCustomer(customer)
+  //   .subscribe()
+  // }
 
 
 

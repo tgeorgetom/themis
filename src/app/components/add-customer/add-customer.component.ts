@@ -12,7 +12,6 @@ export class AddCustomerComponent implements OnInit {
   salary: string;
   age:string;
   showAddCustomer: boolean = false;
-  form: FormGroup;
 
 
   constructor() { }
