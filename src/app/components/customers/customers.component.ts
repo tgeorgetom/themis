@@ -33,7 +33,9 @@ export class CustomersComponent implements OnInit {
 
 
   addCustomer(customer: Customer) {
-    this.customerSevice.addCustomer(customer).subscribe((customer) => this.customers.push(customer))
+    this.customerSevice
+    .addCustomer(customer)
+    .subscribe((customer) => this.customers.push(customer))
   }
 
 }

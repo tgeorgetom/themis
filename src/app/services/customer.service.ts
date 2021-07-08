@@ -36,12 +36,12 @@ export class CustomerService {
     return this.http.delete<Customer>(url)
   }
 
-  addCustomer(customer: Customer): Observable<Customer[]> {
+  addCustomer(customer: Customer): Observable<Customer> {
     // const url = `${this.apiUrl}/create`; 
     const url = `${this.apiUrl}`;
-    return this.http.post<Customer[]>(url, customer, httpOptions)
+    return this.http.post<Customer>(url, customer, httpOptions)
   }
-
+ 
   // updateCustomer(customer: Customer): Observable<Customer[]> {
   //   const url = `${this.apiUrl}/${customer.id}`;
   //   console.log("Service:" + url)
